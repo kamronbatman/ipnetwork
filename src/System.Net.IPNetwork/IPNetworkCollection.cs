@@ -8,6 +8,9 @@ namespace System.Net
     using System.Collections.Generic;
     using System.Numerics;
 
+    /// <summary>
+    /// A collection of IPNetwork2
+    /// </summary>
     public class IPNetworkCollection : IEnumerable<IPNetwork2>, IEnumerator<IPNetwork2>
     {
         private BigInteger _enumerator;
@@ -59,6 +62,9 @@ namespace System.Net
 
         #region Count, Array, Enumerator
 
+        /// <summary>
+        /// Count the nnumber of IPAddresses in a IPNetworkCollection
+        /// </summary>
         public BigInteger Count
         {
             get
@@ -102,6 +108,9 @@ namespace System.Net
 
         #region IEnumerator<IPNetwork> Members
 
+        /// <summary>
+        /// Gets the current IEnumerator item
+        /// </summary>
         public IPNetwork2 Current
         {
             get { return this[this._enumerator]; }
@@ -111,6 +120,9 @@ namespace System.Net
 
         #region IDisposable Members
 
+        /// <summary>
+        /// Dispose the IPNetwork instance
+        /// </summary>
         public void Dispose()
         {
             // nothing to dispose
